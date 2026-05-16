@@ -1,37 +1,29 @@
-# Corrigir capa invisível no flipbook
+# Adicionar Página 2 + corrigir capa
 
-## Problema
+## Página 2 — "Leia antes de começar"
 
-Ao abrir o link, a tela aparece só com o fundo creme e os dois botões laterais — a capa (imagem + título + texto) não está visível.
+Nova página adicionada ao flipbook, na ordem após a capa:
 
-Causa provável: a animação 3D atual (`rotateY: 75deg` + `opacity: 0` inicial dentro de um `AnimatePresence mode="wait"`) está deixando o cartão renderizado mas invisível em alguns navegadores. Além disso, o fundo do cartão (`--card`) é praticamente idêntico ao fundo da página (`--background`), então mesmo quando aparece fica difícil de notar.
+- **Imagem (topo):** https://res.cloudinary.com/dqsuj0pjy/image/upload/v1778975616/PROMPT_DA_IMAGEM_Close-up_editorial_202605162053_xcvub0.jpg
+- **Sobretítulo:** "Leia antes de começar"
+- **Título:** "Aviso Importante"
+- **Corpo:**
+  > Este protocolo não substitui o Desafio de 28 Dias com Botox Coreano Manual.
+  >
+  > Ele existe para potencializar a aparência da pele, melhorar viço, textura e sensação ao toque, especialmente nos dias em que você quer se sentir bonita rapidamente, sem esforço e sem exageros.
+  >
+  > Pense nele como um ritual de acabamento, não como um tratamento profundo.
+  >
+  > É o toque final que deixa sua pele com aquele aspecto de revista, aquela sensação de bem-estar que transparece no espelho.
 
-## O que vou ajustar
+## Corrigir capa invisível
 
-1. **Trocar a animação de virar página** por uma versão mais confiável:
-   - Usar `x` (slide) + `opacity` em vez de `rotateY` 3D para a primeira renderização — garante que a capa apareça imediatamente, sem depender de perspectiva 3D.
-   - Manter o swipe (arrastar) e os botões funcionando igual.
-   - A sensação de "virar página" continua, mais suave.
+Agora que existem 2 páginas, vou também ajustar o flipbook para a capa aparecer corretamente (estava invisível por causa da animação 3D inicial):
+- Trocar a animação de virar página por slide horizontal suave (mantém swipe e setas).
+- Aumentar contraste do cartão (borda + sombra) para destacar do fundo creme.
+- Garantir altura correta no mobile (390x844) e desktop.
+- Botão "Começar a leitura" da capa agora vira a página de verdade.
 
-2. **Aumentar o contraste do cartão**:
-   - Borda rosa suave visível ao redor da página.
-   - Sombra um pouco mais marcada para o cartão se destacar do fundo.
-   - Manter a paleta rosa & creme aprovada.
+## Próximos passos
 
-3. **Garantir altura correta no desktop**:
-   - Ajustar o cálculo de altura do cartão (`aspect-[9/16]`) para não estourar a tela em viewports largos como 904x878.
-   - Limitar altura máxima e centralizar.
-
-4. **Fallback de imagem**:
-   - Adicionar `loading="eager"` na imagem da capa para garantir que aparece de primeira.
-
-## Resultado esperado
-
-Ao abrir o link `/`, a capa aparece imediatamente com:
-- Foto da mulher relaxando no topo
-- Título "Protocolo Pele de Porcelana" em serifa
-- Subtítulo
-- Selo do bônus
-- Botão "Começar a leitura" (desabilitado por enquanto, já que só temos 1 página)
-
-Nada muda em conteúdo — só conserta a renderização.
+Continuo aguardando imagem + texto das próximas páginas. O link permanece o mesmo.
