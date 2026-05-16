@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Protocolo Pele de Porcelana" },
+      { name: "description", content: "Creates shareable ebook-style web pages from images and text for easy online reading." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Protocolo Pele de Porcelana" },
+      { property: "og:description", content: "Creates shareable ebook-style web pages from images and text for easy online reading." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Protocolo Pele de Porcelana" },
+      { name: "twitter:description", content: "Creates shareable ebook-style web pages from images and text for easy online reading." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7d76cc81-a63b-4ae8-9de8-4e0aa63776f9/id-preview-9f497bf0--560b0f56-96d0-4779-8aba-3b6da8154f36.lovable.app-1778975308170.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7d76cc81-a63b-4ae8-9de8-4e0aa63776f9/id-preview-9f497bf0--560b0f56-96d0-4779-8aba-3b6da8154f36.lovable.app-1778975308170.png" },
     ],
     links: [
       {
