@@ -18,29 +18,25 @@ export function Flipbook() {
   const page = pages[index];
 
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-background overflow-hidden px-3 py-4 sm:px-6 sm:py-6">
+    <div className="fixed inset-0 flex flex-col items-center justify-center bg-background overflow-hidden px-3 py-3 sm:px-6 sm:py-6">
       {/* Page stage */}
-      <div
-        className="relative w-full max-w-[440px] flex-1 flex items-center justify-center"
-        style={{ perspective: 1800 }}
-      >
-        <AnimatePresence mode="wait" custom={dir}>
+      <div className="relative w-full max-w-[420px] flex-1 flex items-center justify-center min-h-0">
+        <AnimatePresence mode="wait" custom={dir} initial={false}>
           <motion.div
             key={index}
             custom={dir}
-            initial={{ rotateY: dir > 0 ? 75 : -75, opacity: 0, x: dir * 40 }}
-            animate={{ rotateY: 0, opacity: 1, x: 0 }}
-            exit={{ rotateY: dir > 0 ? -75 : 75, opacity: 0, x: -dir * 40 }}
-            transition={{ duration: 0.55, ease: [0.4, 0, 0.2, 1] }}
+            initial={{ opacity: 0, x: dir * 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -dir * 60 }}
+            transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={0.2}
+            dragElastic={0.18}
             onDragEnd={(_, info) => {
               if (info.offset.x < -60) go(1);
               else if (info.offset.x > 60) go(-1);
             }}
-            className="relative w-full aspect-[9/16] max-h-full rounded-2xl shadow-[0_30px_60px_-20px_oklch(0.45_0.05_20/0.35)] overflow-hidden paper cursor-grab active:cursor-grabbing"
-            style={{ transformStyle: "preserve-3d" }}
+            className="relative w-full h-full max-h-full rounded-2xl border border-primary/30 shadow-[0_25px_60px_-15px_oklch(0.45_0.05_20/0.4)] overflow-hidden bg-card cursor-grab active:cursor-grabbing"
           >
             <PageRenderer page={page} onStart={() => go(1)} hasNext={index < total - 1} />
           </motion.div>
@@ -66,7 +62,7 @@ export function Flipbook() {
       </div>
 
       {/* Footer controls */}
-      <div className="mt-4 flex items-center gap-4 w-full max-w-[440px] justify-between">
+      <div className="mt-3 flex items-center gap-4 w-full max-w-[420px] justify-between shrink-0">
         <button
           onClick={() => go(-1)}
           disabled={index === 0}
@@ -105,41 +101,41 @@ function PageRenderer({
   if (page.type === "cover") {
     return (
       <div className="relative h-full w-full flex flex-col">
-        <div className="relative h-[58%] w-full overflow-hidden">
+        <div className="relative h-[55%] w-full overflow-hidden shrink-0">
           <img
             src={page.image}
             alt={page.title}
+            loading="eager"
             className="h-full w-full object-cover"
             draggable={false}
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-card" />
+          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-b from-transparent to-card" />
         </div>
-        <div className="relative -mt-8 flex-1 flex flex-col items-center justify-between px-6 pb-6 text-center">
+        <div className="relative flex-1 flex flex-col items-center justify-between px-5 pt-2 pb-5 text-center min-h-0">
           <div>
             <div className="inline-block text-[10px] tracking-[0.25em] uppercase text-primary mb-3 border border-primary/40 rounded-full px-3 py-1">
               Ebook
             </div>
-            <h1 className="font-serif text-4xl sm:text-5xl leading-[1.05] text-foreground italic">
+            <h1 className="font-serif text-3xl sm:text-4xl leading-[1.05] text-foreground italic">
               {page.title}
             </h1>
-            <div className="mx-auto my-4 h-px w-12 bg-primary/50" />
-            <p className="font-sans text-sm sm:text-base text-foreground/80 leading-relaxed max-w-[28ch] mx-auto">
+            <div className="mx-auto my-3 h-px w-12 bg-primary/50" />
+            <p className="font-sans text-sm text-foreground/80 leading-relaxed max-w-[28ch] mx-auto">
               {page.subtitle}
             </p>
           </div>
 
-          <div className="w-full space-y-3">
-            <p className="text-[11px] tracking-wider uppercase text-muted-foreground">
+          <div className="w-full space-y-3 mt-4">
+            <p className="text-[10px] tracking-wider uppercase text-muted-foreground leading-relaxed">
               {page.badge}
             </p>
-            {hasNext && (
-              <button
-                onClick={onStart}
-                className="w-full rounded-full bg-primary text-primary-foreground py-3 text-sm font-medium tracking-wide shadow-md hover:opacity-90 transition"
-              >
-                Começar a leitura
-              </button>
-            )}
+            <button
+              onClick={onStart}
+              disabled={!hasNext}
+              className="w-full rounded-full bg-primary text-primary-foreground py-3 text-sm font-medium tracking-wide shadow-md hover:opacity-90 transition disabled:opacity-50"
+            >
+              Começar a leitura
+            </button>
           </div>
         </div>
       </div>
@@ -149,17 +145,28 @@ function PageRenderer({
   return (
     <div className="h-full w-full flex flex-col">
       {page.image && (
-        <div className="h-[40%] w-full overflow-hidden">
-          <img src={page.image} alt={page.title ?? ""} className="h-full w-full object-cover" draggable={false} />
+        <div className="h-[38%] w-full overflow-hidden shrink-0">
+          <img
+            src={page.image}
+            alt={page.title ?? ""}
+            loading="eager"
+            className="h-full w-full object-cover"
+            draggable={false}
+          />
         </div>
       )}
-      <div className="flex-1 overflow-y-auto px-6 py-6">
+      <div className="flex-1 overflow-y-auto px-6 py-5 min-h-0">
+        {page.eyebrow && (
+          <p className="text-[10px] tracking-[0.25em] uppercase text-primary mb-2">
+            {page.eyebrow}
+          </p>
+        )}
         {page.title && (
           <h2 className="font-serif text-2xl sm:text-3xl text-foreground mb-3 italic">
             {page.title}
           </h2>
         )}
-        <p className="font-sans text-sm sm:text-base text-foreground/85 leading-relaxed whitespace-pre-line">
+        <p className="font-sans text-[14px] sm:text-[15px] text-foreground/85 leading-relaxed whitespace-pre-line">
           {page.text}
         </p>
       </div>
