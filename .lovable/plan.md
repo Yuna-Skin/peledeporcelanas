@@ -1,50 +1,37 @@
-# Protocolo Pele de Porcelana — Ebook Flipbook
+# Corrigir capa invisível no flipbook
 
-Um ebook digital acessível por link, com efeito de virar página (flipbook), otimizado primeiro para celular e também bonito no desktop.
+## Problema
 
-## Como vai funcionar
+Ao abrir o link, a tela aparece só com o fundo creme e os dois botões laterais — a capa (imagem + título + texto) não está visível.
 
-- Você abre o link e vê o ebook em tela cheia.
-- Toque/arraste para virar a página (ou setas no desktop).
-- Indicador de página (ex: 1/12) e botão de voltar à capa.
-- Construção página por página: começamos pela **Capa** agora e adicionamos cada nova página conforme você for me mandando imagem + texto.
+Causa provável: a animação 3D atual (`rotateY: 75deg` + `opacity: 0` inicial dentro de um `AnimatePresence mode="wait"`) está deixando o cartão renderizado mas invisível em alguns navegadores. Além disso, o fundo do cartão (`--card`) é praticamente idêntico ao fundo da página (`--background`), então mesmo quando aparece fica difícil de notar.
 
-## Estilo visual
+## O que vou ajustar
 
-Paleta **Rosa suave & creme**:
-- Fundo creme `#fdf6f0`
-- Rosa claro `#f4e4e1`
-- Rosa principal `#d4a5a5`
-- Marrom rosado (texto/títulos) `#8b5a5a`
+1. **Trocar a animação de virar página** por uma versão mais confiável:
+   - Usar `x` (slide) + `opacity` em vez de `rotateY` 3D para a primeira renderização — garante que a capa apareça imediatamente, sem depender de perspectiva 3D.
+   - Manter o swipe (arrastar) e os botões funcionando igual.
+   - A sensação de "virar página" continua, mais suave.
 
-Tipografia delicada e feminina: serifa elegante para títulos (ex: Cormorant/Playfair) + sans leve para corpo (ex: Inter/Karla). Cantos arredondados sutis, sombra suave nas páginas, textura de papel leve.
+2. **Aumentar o contraste do cartão**:
+   - Borda rosa suave visível ao redor da página.
+   - Sombra um pouco mais marcada para o cartão se destacar do fundo.
+   - Manter a paleta rosa & creme aprovada.
 
-## Mobile-first
+3. **Garantir altura correta no desktop**:
+   - Ajustar o cálculo de altura do cartão (`aspect-[9/16]`) para não estourar a tela em viewports largos como 904x878.
+   - Limitar altura máxima e centralizar.
 
-- Layout vertical otimizado para tela de celular (proporção ~9:16 por página).
-- Gestos de swipe (esquerda/direita) para virar.
-- Botões grandes o suficiente para o dedo.
-- Imagens e textos escalam sem cortar.
-- No desktop: página centralizada com margens generosas, mesma experiência.
+4. **Fallback de imagem**:
+   - Adicionar `loading="eager"` na imagem da capa para garantir que aparece de primeira.
 
-## Primeira entrega (esta etapa)
+## Resultado esperado
 
-Página 1 — Capa:
-- Imagem: a foto da mulher relaxando (URL que você enviou).
-- Título: "Protocolo Pele de Porcelana"
-- Subtítulo: "O ritual usado para deixar a pele uniforme, viçosa e bonita, mesmo sem maquiagem."
-- Selo/badge: "Bônus exclusivo do Desafio 28 Dias Botox Coreano Manual"
-- Botão "Começar a leitura" (mesmo que ainda não tenha próxima página — fica preparado).
+Ao abrir o link `/`, a capa aparece imediatamente com:
+- Foto da mulher relaxando no topo
+- Título "Protocolo Pele de Porcelana" em serifa
+- Subtítulo
+- Selo do bônus
+- Botão "Começar a leitura" (desabilitado por enquanto, já que só temos 1 página)
 
-## Próximos passos
-
-A cada nova mensagem sua com imagem + texto, eu adiciono uma nova página ao flipbook na ordem que você mandar. O link permanece o mesmo.
-
-## Detalhes técnicos
-
-- Rota única `/` renderizando o flipbook em tela cheia.
-- Dados das páginas em um array (`src/data/pages.ts`) — fácil de adicionar/editar/reordenar.
-- Animação de virar página com Framer Motion (transform 3D + perspective).
-- Swipe via gestos do Framer Motion (`drag="x"`).
-- Imagens hospedadas externamente (Cloudinary) — usadas via `<img src>` direto.
-- Sem backend nesta etapa (conteúdo estático no código).
+Nada muda em conteúdo — só conserta a renderização.
