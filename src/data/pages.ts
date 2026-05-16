@@ -9,6 +9,7 @@ export type EbookPage =
   | {
       type: "content";
       image?: string;
+      eyebrow?: string;
       title?: string;
       text: string;
     };
@@ -22,5 +23,19 @@ export const pages: EbookPage[] = [
     subtitle:
       "O ritual usado para deixar a pele uniforme, viçosa e bonita, mesmo sem maquiagem.",
     badge: "Bônus exclusivo do Desafio 28 Dias Botox Coreano Manual",
+  },
+  {
+    type: "content",
+    image:
+      "https://res.cloudinary.com/dqsuj0pjy/image/upload/v1778975616/PROMPT_DA_IMAGEM_Close-up_editorial_202605162053_xcvub0.jpg",
+    eyebrow: "Leia antes de começar",
+    title: "Aviso Importante",
+    text: `Este protocolo não substitui o Desafio de 28 Dias com Botox Coreano Manual.
+
+Ele existe para potencializar a aparência da pele, melhorar viço, textura e sensação ao toque, especialmente nos dias em que você quer se sentir bonita rapidamente, sem esforço e sem exageros.
+
+Pense nele como um ritual de acabamento, não como um tratamento profundo.
+
+É o toque final que deixa sua pele com aquele aspecto de revista, aquela sensação de bem-estar que transparece no espelho.`,
   },
 ];
