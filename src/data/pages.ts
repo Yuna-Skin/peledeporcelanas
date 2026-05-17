@@ -278,4 +278,34 @@ Mais não é melhor.
 
 Consistência inteligente é melhor que exagero bem-intencionado.`,
   },
+  {
+    type: "content",
+    image:
+      "https://res.cloudinary.com/dqsuj0pjy/image/upload/v1778985243/Fotografia_editorial_premium_de_uma_202605162333_levyto.jpg",
+    eyebrow: "Conexão com o Desafio",
+    title: "Como esse protocolo se conecta ao Botox Coreano Manual",
+    text: `Esses dois rituais não competem. Eles se completam.
+
+Cada um tem um papel específico, e juntos criam um resultado que você não conseguiria apenas com um deles.
+
+— Botox Coreano Manual
+Atua na estrutura do rosto: músculos, tensões, circulação e formato.
+
+— Protocolo Pele de Porcelana
+Atua na aparência da pele: textura, viço, uniformidade e acabamento.
+
+O resultado quando você usa os dois
+
+— Rosto mais firme
+Estrutura organizada e músculos relaxados.
+
+— Pele mais uniforme
+Textura suave e aspecto descansado.
+
+— Aparência mais jovem
+Sem parecer artificial ou exagerada.
+
+— Mais bonita no espelho e nas fotos
+Confiança que vem de se sentir bem com você mesma.`,
+  },
 ];
