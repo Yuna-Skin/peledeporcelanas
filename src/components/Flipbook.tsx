@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { pages, type EbookPage } from "@/data/pages";
+import { ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { pages as defaultPages, type EbookPage } from "@/data/pages";
 
-export function Flipbook() {
+export function Flipbook({ pages = defaultPages }: { pages?: EbookPage[] }) {
   const [index, setIndex] = useState(0);
   const [dir, setDir] = useState(1);
   const total = pages.length;
@@ -19,6 +20,14 @@ export function Flipbook() {
 
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center bg-background overflow-hidden px-3 py-3 sm:px-6 sm:py-6">
+      <Link
+        to="/"
+        aria-label="Voltar à biblioteca"
+        className="absolute top-3 left-3 sm:top-5 sm:left-5 z-10 h-10 px-3 flex items-center gap-1.5 rounded-full bg-card border border-border shadow-sm text-xs text-foreground/80 hover:text-foreground transition"
+      >
+        <ArrowLeft className="h-4 w-4" />
+        Biblioteca
+      </Link>
       {/* Page stage */}
       <div className="relative w-full max-w-[420px] flex-1 flex items-center justify-center min-h-0">
         <AnimatePresence mode="wait" custom={dir} initial={false}>
