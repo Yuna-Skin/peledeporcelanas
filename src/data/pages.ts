@@ -242,4 +242,26 @@ Use toques suaves, como se estivesse absorvendo a água, não removendo à forç
 Evite aplicar produtos pesados logo após.
 Deixe a pele respirar e absorver os benefícios do ritual que você acabou de fazer.`,
   },
+  {
+    type: "content",
+    image:
+      "https://res.cloudinary.com/dqsuj0pjy/image/upload/v1778984973/Fotografia_editorial_sofisticada_de_uma_202605162329_fe6zqh.jpg",
+    eyebrow: "Atenção",
+    title: "Dica importante e o que não fazer",
+    text: `Se sua pele estiver sensível, use apenas água fria e evite esfregar.
+
+A pele vai te dizer o que precisa, basta escutar.
+
+O que NÃO fazer
+Proteger sua pele é tão importante quanto cuidar dela. Às vezes, o melhor cuidado é saber quando parar.
+
+❌ Usar todos os dias
+A pele precisa de descanso. Respeite o intervalo de 2 a 3 vezes por semana.
+
+❌ Deixar mais de 20 minutos
+Mais tempo não é melhor. É apenas risco de irritação desnecessária.
+
+❌ Esfregar ao retirar
+Movimentos bruscos machucam a pele e anulam os benefícios do ritual.`,
+  },
 ];
