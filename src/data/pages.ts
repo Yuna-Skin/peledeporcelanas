@@ -187,4 +187,41 @@ Esse momento faz parte do ritual.
 
 Não é só sobre a máscara, é sobre você se dar permissão para parar, respirar e cuidar de si mesma.`,
   },
+  {
+    type: "content",
+    image:
+      "https://res.cloudinary.com/dqsuj0pjy/image/upload/v1778984756/Fotografia_editorial_premium_de_ingredientes_202605162325_apzvuy.jpg",
+    eyebrow: "A receita",
+    title: "A Máscara de Porcelana",
+    text: `Esta máscara não é um tratamento profundo.
+
+Ela não vai apagar rugas, clarear manchas ou substituir procedimentos estéticos.
+
+E está tudo bem.
+
+Ela ajuda a melhorar viço, uniformidade e aparência descansada, e isso já é muito.
+
+É o suficiente para você se olhar no espelho e se sentir bem.
+
+Ingredientes simples e naturais
+Use apenas os que você tiver em casa. Não precisa ter todos. A beleza está na simplicidade.
+
+— Base líquida
+• Água filtrada
+• Chá de camomila
+• Chá verde
+• Água de arroz
+• Água gelada
+
+— Ingredientes texturizantes
+• Amido natural (milho ou arroz)
+• Aveia fina
+• Argila branca
+
+— Ingredientes hidratantes
+• Mel puro
+• Iogurte natural
+• Aloe vera natural
+• Óleo vegetal leve (opcional)`,
+  },
 ];
