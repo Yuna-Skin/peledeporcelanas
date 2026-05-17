@@ -224,4 +224,22 @@ Use apenas os que você tiver em casa. Não precisa ter todos. A beleza está na
 • Aloe vera natural
 • Óleo vegetal leve (opcional)`,
   },
+  {
+    type: "content",
+    image:
+      "https://res.cloudinary.com/dqsuj0pjy/image/upload/v1778984863/Mulher_elegante_removendo_suavemente_uma_202605162327_svnqdp.jpg",
+    eyebrow: "Ritual · Passo 4",
+    title: "Remoção da máscara",
+    text: `📌 Lembre-se:
+Ingredientes naturais não significam ausência de reações. Teste sempre em uma pequena área antes de aplicar no rosto todo.
+
+Retire com cuidado
+Use água fria ou levemente morna. Nunca água quente, que pode ressecar e irritar a pele.
+
+Seque delicadamente, sem esfregar.
+Use toques suaves, como se estivesse absorvendo a água, não removendo à força.
+
+Evite aplicar produtos pesados logo após.
+Deixe a pele respirar e absorver os benefícios do ritual que você acabou de fazer.`,
+  },
 ];
