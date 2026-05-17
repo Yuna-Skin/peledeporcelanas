@@ -1,4 +1,5 @@
 import { pages as peleDePorcelanaPages, type EbookPage } from "./pages";
+import { pagesAntiErros } from "./pages-anti-erros";
 
 export type Ebook = {
   id: string;
@@ -23,13 +24,15 @@ export const ebooks: Ebook[] = [
     pages: peleDePorcelanaPages,
   },
   {
-    id: "bonus-2",
-    title: "Em breve",
-    subtitle: "Novo bônus exclusivo do Desafio 28 Dias.",
+    id: "anti-erros",
+    title: "Guia Anti-Erros do Botox Coreano Manual",
+    subtitle:
+      "Os erros silenciosos que impedem resultados — e como evitar cada um deles.",
     cover:
-      "https://res.cloudinary.com/dqsuj0pjy/image/upload/v1778975616/PROMPT_DA_IMAGEM_Close-up_editorial_202605162053_xcvub0.jpg",
+      "https://res.cloudinary.com/dqsuj0pjy/image/upload/v1778986049/Retrato_editorial_sofisticado_de_uma_202605162347_ojdhii.jpg",
     badge: "Bônus 02",
-    available: false,
+    available: true,
+    pages: pagesAntiErros,
   },
   {
     id: "bonus-3",
