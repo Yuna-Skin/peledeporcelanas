@@ -23,9 +23,11 @@ export function Flipbook({ pages = defaultPages }: { pages?: EbookPage[] }) {
       <Link
         to="/"
         aria-label="Voltar à biblioteca"
-        className="absolute top-3 left-3 sm:top-5 sm:left-5 z-10 h-10 px-3 flex items-center gap-1.5 rounded-full bg-card border border-border shadow-sm text-xs text-foreground/80 hover:text-foreground transition"
+        className="group absolute top-4 left-4 sm:top-6 sm:left-6 z-20 h-9 pl-2.5 pr-4 inline-flex items-center gap-2 rounded-full bg-card/85 backdrop-blur-md border border-primary/25 shadow-[0_6px_20px_-8px_oklch(0.45_0.05_20/0.35)] text-[11px] font-medium tracking-[0.18em] uppercase text-foreground/80 hover:text-foreground hover:border-primary/50 hover:shadow-[0_10px_28px_-10px_oklch(0.45_0.05_20/0.5)] hover:-translate-y-px transition-all duration-300"
       >
-        <ArrowLeft className="h-4 w-4" />
+        <span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+          <ArrowLeft className="h-3 w-3" strokeWidth={2.5} />
+        </span>
         Biblioteca
       </Link>
       {/* Page stage */}
