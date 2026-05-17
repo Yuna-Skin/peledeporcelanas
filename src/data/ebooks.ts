@@ -1,5 +1,6 @@
 import { pages as peleDePorcelanaPages, type EbookPage } from "./pages";
 import { pagesAntiErros } from "./pages-anti-erros";
+import { pagesManutencao } from "./pages-manutencao";
 
 export type Ebook = {
   id: string;
@@ -35,13 +36,15 @@ export const ebooks: Ebook[] = [
     pages: pagesAntiErros,
   },
   {
-    id: "bonus-3",
-    title: "Em breve",
-    subtitle: "Novo bônus exclusivo do Desafio 28 Dias.",
+    id: "manutencao",
+    title: "Plano Leve de Manutenção Pós-Desafio",
+    subtitle:
+      "Como preservar sua juventude facial conquistada com leveza e inteligência.",
     cover:
-      "https://res.cloudinary.com/dqsuj0pjy/image/upload/v1778983689/Retrato_editorial_ultra_sofisticado_de_202605162305_siqtf5.jpg",
+      "https://res.cloudinary.com/dqsuj0pjy/image/upload/v1779056395/Close-up_editorial_extremamente_sofisticado_de_202605171918_bo6vcy.jpg",
     badge: "Bônus 03",
-    available: false,
+    available: true,
+    pages: pagesManutencao,
   },
 ];
 
