@@ -264,4 +264,18 @@ Mais tempo não é melhor. É apenas risco de irritação desnecessária.
 ❌ Esfregar ao retirar
 Movimentos bruscos machucam a pele e anulam os benefícios do ritual.`,
   },
+  {
+    type: "content",
+    image:
+      "https://res.cloudinary.com/dqsuj0pjy/image/upload/v1778985102/Mulher_elegante_em_ambiente_minimalista_202605162331_fsrobi.jpg",
+    eyebrow: "Cuidado extra",
+    title: "Atenção especial",
+    text: `Nunca misture com produtos químicos fortes ou use após procedimentos agressivos como peeling profundo ou laser.
+
+Se sua pele estiver muito sensível, machucada ou com alguma condição ativa, consulte um dermatologista antes.
+
+Mais não é melhor.
+
+Consistência inteligente é melhor que exagero bem-intencionado.`,
+  },
 ];
