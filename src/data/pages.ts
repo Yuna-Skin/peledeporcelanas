@@ -308,4 +308,26 @@ Sem parecer artificial ou exagerada.
 — Mais bonita no espelho e nas fotos
 Confiança que vem de se sentir bem com você mesma.`,
   },
+  {
+    type: "content",
+    image:
+      "https://res.cloudinary.com/dqsuj0pjy/image/upload/v1778985331/Retrato_editorial_sofisticado_de_uma_202605162335_sllchq.jpg",
+    eyebrow: "Estrutura + Superfície",
+    title: "Mensagem final",
+    text: `Usados juntos, eles deixam o rosto com uma harmonia que vai além do que qualquer produto sozinho poderia fazer.
+
+É a combinação entre estrutura e superfície, intenção e cuidado, técnica e ritual.
+
+Beleza não é excesso.
+
+Não é agressão.
+
+Não é complicação.
+
+É constância.
+
+Cuidado.
+
+E saber quando fazer menos.`,
+  },
 ];
