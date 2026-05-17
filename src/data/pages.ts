@@ -65,4 +65,30 @@ Você se sente confiante em qualquer distância, sem medo de ser vista sem filtr
 — Sensação de pele bem cuidada
 É o tipo de pele que parece bonita antes da maquiagem, e muitas vezes nem precisa dela.`,
   },
+  {
+    type: "content",
+    image:
+      "https://res.cloudinary.com/dqsuj0pjy/image/upload/v1778983869/Fotografia_editorial_premium_mostrando_uma_202605162310_er8viw.jpg",
+    eyebrow: "Capítulo 2",
+    title: "Por que a pele não responde aos produtos",
+    text: `O erro mais comum
+
+A maioria das mulheres tenta melhorar a pele tratando apenas a superfície.
+
+Mais cremes. Mais produtos. Mais camadas. Mais promessas em frascos caros.
+
+O problema é que uma pele tensionada, inchada ou desorganizada não responde bem a nada aplicado por cima.
+
+É como tentar pintar uma parede rachada — o resultado nunca fica perfeito.
+
+— Primeiro: organizar o rosto
+Desintoxicar, relaxar músculos, melhorar circulação.
+
+— Depois: cuidar da pele
+Aplicar produtos que realmente funcionam.
+
+Mulheres com pele bonita fazem o oposto: primeiro organizam o rosto, depois cuidam da pele.
+
+É exatamente isso que você está aprendendo a fazer.`,
+  },
 ];
