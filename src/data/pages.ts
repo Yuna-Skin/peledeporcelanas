@@ -141,4 +141,25 @@ Lembre-se: a pele do rosto é fina e delicada.
 
 Trate-a com o mesmo cuidado que você trataria um tecido fino e valioso.`,
   },
+  {
+    type: "content",
+    image:
+      "https://res.cloudinary.com/dqsuj0pjy/image/upload/v1778984427/Mulher_elegante_aplicando_uma_ma%CC%81scara_202605162320_oglync.jpg",
+    eyebrow: "Ritual · Passo 2",
+    title: "Aplicação da máscara",
+    text: `01 — Aplique com movimentos suaves
+Use as pontas dos dedos para espalhar a máscara de forma uniforme.
+
+02 — Sem pressionar a pele
+Deixe os dedos deslizarem levemente, sem arrastar ou puxar.
+
+03 — Evite a região dos olhos
+A pele ao redor dos olhos é mais sensível e precisa de cuidado especial.
+
+A ideia aqui não é força, é delicadeza.
+
+Não é quantidade, é intenção.
+
+Você está oferecendo um presente à sua pele, não forçando ela a mudar.`,
+  },
 ];
