@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { pages, type EbookPage } from "@/data/pages";
+import { ChevronLeft, ChevronRight, ArrowLeft } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { pages as defaultPages, type EbookPage } from "@/data/pages";
 
-export function Flipbook() {
+export function Flipbook({ pages = defaultPages }: { pages?: EbookPage[] }) {
   const [index, setIndex] = useState(0);
   const [dir, setDir] = useState(1);
   const total = pages.length;
