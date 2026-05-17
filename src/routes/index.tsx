@@ -9,7 +9,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Sua biblioteca de bônus exclusivos do Desafio 28 Dias com Botox Coreano Manual.",
+          "Sua biblioteca de bônus exclusivos do Desafio 28 Dias com Yuna Skin.",
       },
       { property: "og:title", content: "Biblioteca de Bônus" },
       {
@@ -27,7 +27,7 @@ function Library() {
       <div className="max-w-3xl mx-auto">
         <header className="text-center mb-10 sm:mb-14">
           <p className="text-[10px] tracking-[0.3em] uppercase text-primary mb-3">
-            Desafio 28 Dias · Botox Coreano Manual
+            Desafio 28 Dias · Yuna Skin
           </p>
           <h1 className="font-serif italic text-3xl sm:text-5xl text-foreground leading-[1.05]">
             Sua biblioteca de bônus
