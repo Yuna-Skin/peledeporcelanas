@@ -38,4 +38,31 @@ Pense nele como um ritual de acabamento, não como um tratamento profundo.
 
 É o toque final que deixa sua pele com aquele aspecto de revista, aquela sensação de bem-estar que transparece no espelho.`,
   },
+  {
+    type: "content",
+    image:
+      "https://res.cloudinary.com/dqsuj0pjy/image/upload/v1778983689/Retrato_editorial_ultra_sofisticado_de_202605162305_siqtf5.jpg",
+    eyebrow: "Capítulo 1",
+    title: "O que realmente significa “pele de porcelana”",
+    text: `Pele de porcelana não é pele esticada, artificial ou sem expressão.
+
+Não é sobre parecer irreal ou perder a naturalidade do seu rosto.
+
+É exatamente o oposto.
+
+— Textura uniforme
+Pele suave ao toque, sem irregularidades visíveis.
+
+— Aspecto descansado
+Aparência de quem dormiu bem e está relaxada.
+
+— Viço natural
+Brilho saudável que vem de dentro.
+
+— Aparência bonita mesmo de perto
+Você se sente confiante em qualquer distância, sem medo de ser vista sem filtros ou sem maquiagem pesada.
+
+— Sensação de pele bem cuidada
+É o tipo de pele que parece bonita antes da maquiagem, e muitas vezes nem precisa dela.`,
+  },
 ];
