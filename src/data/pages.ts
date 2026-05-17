@@ -117,4 +117,28 @@ Frequência recomendada: 2 a 3 vezes por semana.
 
 Melhor horário: à noite ou pela manhã sem maquiagem pesada.`,
   },
+  {
+    type: "content",
+    image:
+      "https://res.cloudinary.com/dqsuj0pjy/image/upload/v1778984203/Fotografia_editorial_minimalista_de_uma_202605162316_cp48ue.jpg",
+    eyebrow: "Ritual · Passo 1",
+    title: "Preparação da pele",
+    text: `Comece do jeito mais simples
+
+Lave o rosto normalmente, apenas com água ou seu sabonete habitual.
+
+Não precisa ser nada especial, nada caro, nada complicado.
+
+Seque suavemente, sem esfregar.
+
+Use uma toalha macia e faça movimentos delicados, como se estivesse acariciando a pele, não esfregando.
+
+Esse cuidado simples evita irritação e preserva o viço natural da pele.
+
+Muitas mulheres machucam a pele sem perceber, só pelo jeito como secam o rosto.
+
+Lembre-se: a pele do rosto é fina e delicada.
+
+Trate-a com o mesmo cuidado que você trataria um tecido fino e valioso.`,
+  },
 ];
