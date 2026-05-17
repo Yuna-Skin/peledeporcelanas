@@ -162,4 +162,29 @@ Não é quantidade, é intenção.
 
 Você está oferecendo um presente à sua pele, não forçando ela a mudar.`,
   },
+  {
+    type: "content",
+    image:
+      "https://res.cloudinary.com/dqsuj0pjy/image/upload/v1778984565/Mulher_elegante_relaxando_com_ma%CC%81scara_202605162322_sidr1k.jpg",
+    eyebrow: "Ritual · Passo 3",
+    title: "Tempo de ação",
+    text: `Deixe agir por 10 a 15 minutos.
+
+Não mais que isso.
+
+Mais tempo não significa melhores resultados, significa apenas desperdício e possível irritação.
+
+— Relaxe o rosto
+Deixe os músculos soltos, sem tensão na testa, olhos ou boca. Apenas respire e relaxe.
+
+— Evite celular
+Este é um momento seu. Deixe as notificações, as mensagens e as redes sociais de lado.
+
+— Respire fundo
+Inspire pelo nariz, expire pela boca. Deixe o corpo relaxar junto com o rosto.
+
+Esse momento faz parte do ritual.
+
+Não é só sobre a máscara, é sobre você se dar permissão para parar, respirar e cuidar de si mesma.`,
+  },
 ];
