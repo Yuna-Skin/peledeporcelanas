@@ -330,4 +330,26 @@ Cuidado.
 
 E saber quando fazer menos.`,
   },
+  {
+    type: "content",
+    image:
+      "https://res.cloudinary.com/dqsuj0pjy/image/upload/v1778985406/Mulher_elegante_sentada_sozinha_em_202605162336_f9qvqf.jpg",
+    eyebrow: "Para fechar",
+    title: "Use este protocolo como um momento seu",
+    text: `Sem pressa.
+
+Sem cobrança.
+
+Sem comparação com o que você vê nas redes sociais ou nas revistas.
+
+Este ritual não vai transformar você em outra pessoa.
+
+Ele vai te ajudar a revelar a versão mais descansada, viçosa e confiante de você mesma.
+
+E isso, por si só, já é mais do que suficiente.
+
+💚 Você merece esse cuidado
+
+Não porque precisa “consertar” algo, mas porque cuidar de si mesma é um ato de amor próprio.`,
+  },
 ];
