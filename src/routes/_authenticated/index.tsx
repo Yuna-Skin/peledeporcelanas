@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ebooks } from "@/data/ebooks";
 import { Lock } from "lucide-react";
+import { Logo } from "@/components/Logo";
 
 export const Route = createFileRoute("/_authenticated/")({
   head: () => ({
