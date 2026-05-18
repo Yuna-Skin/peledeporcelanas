@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ebooks } from "@/data/ebooks";
 import { Lock } from "lucide-react";
+import { Logo } from "@/components/Logo";
 
 export const Route = createFileRoute("/_authenticated/")({
   head: () => ({
@@ -26,6 +27,7 @@ function Library() {
     <div className="min-h-screen bg-background px-5 py-10 sm:py-16">
       <div className="max-w-3xl mx-auto">
         <header className="text-center mb-10 sm:mb-14">
+          <Logo className="mx-auto h-20 sm:h-24 w-auto mb-6" />
           <p className="text-[10px] tracking-[0.3em] uppercase text-primary mb-3">
             Desafio 28 Dias · Yuna Skin
           </p>

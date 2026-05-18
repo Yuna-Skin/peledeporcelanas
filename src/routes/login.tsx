@@ -2,6 +2,7 @@ import { createFileRoute, redirect, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState, type FormEvent } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { Loader2 } from "lucide-react";
+import { Logo } from "@/components/Logo";
 
 export const Route = createFileRoute("/login")({
   validateSearch: (search: Record<string, unknown>) => ({
@@ -82,6 +83,7 @@ function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-background px-5 py-10">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
+          <Logo className="mx-auto h-16 w-auto mb-5" />
           <p className="text-[10px] tracking-[0.3em] uppercase text-primary mb-3">
             Desafio 28 Dias · Yuna Skin
           </p>
