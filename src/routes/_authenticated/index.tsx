@@ -27,7 +27,7 @@ function Library() {
     <div className="min-h-screen bg-background px-5 py-10 sm:py-16">
       <div className="max-w-3xl mx-auto">
         <header className="text-center mb-10 sm:mb-14">
-          <Logo className="mx-auto h-20 sm:h-24 w-auto mb-6" />
+          <Logo className="mx-auto h-10 sm:h-12 w-auto mb-5" />
           <p className="text-[10px] tracking-[0.3em] uppercase text-primary mb-3">
             Desafio 28 Dias · Yuna Skin
           </p>
