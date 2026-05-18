@@ -2,7 +2,7 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { Flipbook } from "@/components/Flipbook";
 import { getEbook } from "@/data/ebooks";
 
-export const Route = createFileRoute("/_authenticated/ebook/$id")({
+export const Route = createFileRoute("/ebook/$id")({
   loader: ({ params }) => {
     const ebook = getEbook(params.id);
     if (!ebook || !ebook.available || !ebook.pages) throw notFound();
