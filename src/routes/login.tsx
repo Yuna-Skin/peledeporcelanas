@@ -83,6 +83,7 @@ function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-background px-5 py-10">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
+          <Logo className="mx-auto h-16 w-auto mb-5" />
           <p className="text-[10px] tracking-[0.3em] uppercase text-primary mb-3">
             Desafio 28 Dias · Yuna Skin
           </p>
