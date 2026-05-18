@@ -12,7 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as AuthenticatedRouteImport } from './routes/_authenticated'
 import { Route as AuthenticatedIndexRouteImport } from './routes/_authenticated/index'
-import { Route as AuthenticatedEbookIdRouteImport } from './routes/_authenticated/ebook.$id'
+import { Route as EbookIdRouteImport } from './routes/ebook.$id'
 
 const LoginRoute = LoginRouteImport.update({
   id: '/login',
@@ -28,45 +28,46 @@ const AuthenticatedIndexRoute = AuthenticatedIndexRouteImport.update({
   path: '/',
   getParentRoute: () => AuthenticatedRoute,
 } as any)
-const AuthenticatedEbookIdRoute = AuthenticatedEbookIdRouteImport.update({
+const EbookIdRoute = EbookIdRouteImport.update({
   id: '/ebook/$id',
   path: '/ebook/$id',
-  getParentRoute: () => AuthenticatedRoute,
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof AuthenticatedIndexRoute
   '/login': typeof LoginRoute
-  '/ebook/$id': typeof AuthenticatedEbookIdRoute
+  '/ebook/$id': typeof EbookIdRoute
 }
 export interface FileRoutesByTo {
   '/login': typeof LoginRoute
+  '/ebook/$id': typeof EbookIdRoute
   '/': typeof AuthenticatedIndexRoute
-  '/ebook/$id': typeof AuthenticatedEbookIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_authenticated': typeof AuthenticatedRouteWithChildren
   '/login': typeof LoginRoute
+  '/ebook/$id': typeof EbookIdRoute
   '/_authenticated/': typeof AuthenticatedIndexRoute
-  '/_authenticated/ebook/$id': typeof AuthenticatedEbookIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths: '/' | '/login' | '/ebook/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/login' | '/' | '/ebook/$id'
+  to: '/login' | '/ebook/$id' | '/'
   id:
     | '__root__'
     | '/_authenticated'
     | '/login'
+    | '/ebook/$id'
     | '/_authenticated/'
-    | '/_authenticated/ebook/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   AuthenticatedRoute: typeof AuthenticatedRouteWithChildren
   LoginRoute: typeof LoginRoute
+  EbookIdRoute: typeof EbookIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -92,24 +93,22 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedIndexRouteImport
       parentRoute: typeof AuthenticatedRoute
     }
-    '/_authenticated/ebook/$id': {
-      id: '/_authenticated/ebook/$id'
+    '/ebook/$id': {
+      id: '/ebook/$id'
       path: '/ebook/$id'
       fullPath: '/ebook/$id'
-      preLoaderRoute: typeof AuthenticatedEbookIdRouteImport
-      parentRoute: typeof AuthenticatedRoute
+      preLoaderRoute: typeof EbookIdRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }
 
 interface AuthenticatedRouteChildren {
   AuthenticatedIndexRoute: typeof AuthenticatedIndexRoute
-  AuthenticatedEbookIdRoute: typeof AuthenticatedEbookIdRoute
 }
 
 const AuthenticatedRouteChildren: AuthenticatedRouteChildren = {
   AuthenticatedIndexRoute: AuthenticatedIndexRoute,
-  AuthenticatedEbookIdRoute: AuthenticatedEbookIdRoute,
 }
 
 const AuthenticatedRouteWithChildren = AuthenticatedRoute._addFileChildren(
@@ -119,6 +118,7 @@ const AuthenticatedRouteWithChildren = AuthenticatedRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   AuthenticatedRoute: AuthenticatedRouteWithChildren,
   LoginRoute: LoginRoute,
+  EbookIdRoute: EbookIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
